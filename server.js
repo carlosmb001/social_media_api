@@ -4,15 +4,16 @@ const routes = require('./routes');
 
 require('dotenv').config();
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(routes);
 
-connection.on('error', console.error.bind(console, 'connection error:'));
-connection.once('open', () => {
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', () => {
     app.listen(PORT, () => {
         console.log(`🌍 Now listening to ${PORT}\n🌍 Connected to Database`);
     });
