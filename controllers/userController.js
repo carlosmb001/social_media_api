@@ -68,17 +68,11 @@ module.exports = {
     // fix function
     async addFriend(req, res) {
         try {    
-            const friendId = req.body.friendId;    
-        // Check if friendId corresponds to an actual user
-        const friendExists = await User.findById(friendId);
-        if (!friendExists) {
-            return res.status(404).json({ message: 'No friend with that ID' });
-        }
             const user = await User.findOneAndUpdate(
                 { _id: req.params._id },
-                { $push: {friends: friendId} },
+                { $addToSet: { friends: req.params.friendId } },
                 { runValidators: true, new: true }
-            );
+              );
             if (!user) {
                 return res.status(404).json({ message: 'No user with that ID' })
             }
@@ -89,9 +83,10 @@ module.exports = {
     },
 
     //delete a friend
+    // fix function crashed server
     async deleteFriend(req, res) {
         try {
-            const user = await User.deleteOne(
+            const user = await User.findOneAndDelete(
                 { _id: req.params._id },
                 { $pull: { friends: req.params.friendId } },
                 { runValidators: true, new: true }
@@ -99,8 +94,7 @@ module.exports = {
             if (!user) {
                 return res.status(404).json({ message: 'No user with that ID' })
             }
-            res.json(user);
-            res.json({message: 'Friend deleted!'})
+            res.json({message: 'Friend was removed!'})
         }catch (err) {
             res.status(500).json(err);
         }
