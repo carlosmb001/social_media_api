@@ -1,14 +1,19 @@
 const express = require('express');
-const app = express();
-const mongoose = require('mongoose');
+const db = require('./config/connection');
+const routes = require('./routes');
+
 require('dotenv').config();
 
-mongoose.connect(process.env.DATABASE_URL);
-const bd = mongoose.connection;
+const PORT = 3001;
+const app = express();
 
-bd.on('error', console.error.bind(console, 'connection error:'));
-bd.once('open', () => console.log('🌍 Connected to Database'));
 
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.listen(3000, () => console.log('🌍 Now listening'));
+connection.on('error', console.error.bind(console, 'connection error:'));
+connection.once('open', () => {
+    app.listen(PORT, () => {
+        console.log(`🌍 Now listening to ${PORT}\n🌍 Connected to Database`);
+    });
+});

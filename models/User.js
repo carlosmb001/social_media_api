@@ -20,19 +20,27 @@ const userSchema = new mongoose.Schema({
         }
     },
     thoughts: [{
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Thought'
     }],
     friends: [{
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     }],
+},
+    {
+        toJSON: {
+            virtuals: true,
+        },
+        id: false
+    }
+);
+// virtual get total count of friends on retrieval
+userSchema 
+.virtual('friendCount')
+.get(function () {
+    return this.friends.length;
 });
-
-// creates virtual called friendCount retrieves the length of the user's friends array
-userSchema.virtual('friendCount').get(function() {
-  return this.friends.length;
-});
-
+// creates the User model using the User schema
 const User = mongoose.model('User', userSchema);
 module.exports = User;
