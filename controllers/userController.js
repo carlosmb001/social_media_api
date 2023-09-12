@@ -65,7 +65,6 @@ module.exports = {
     },
 
     //add a friend
-    // fix function
     async addFriend(req, res) {
         try {    
             const user = await User.findOneAndUpdate(
@@ -83,7 +82,6 @@ module.exports = {
     },
 
     //delete a friend
-    // fix function crashed server
     async deleteFriend(req, res) {
         try {
             const user = await User.findOneAndDelete(
