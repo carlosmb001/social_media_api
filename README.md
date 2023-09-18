@@ -12,6 +12,9 @@ SO THAT my website can handle large amounts of unstructured data
 ```
 ### Walkthrough Video
 <a href="https://www.youtube.com/watch?v=9HfLLEZ3hMI&t=13s"><img src="assets/socialMediaApi.gif" alt="Website Preview"></a>
+<a href="https://www.youtube.com/watch?v=9HfLLEZ3hMI&t=13s"><img src="assets/socialMediaApi.gif" alt="Website Preview"></a>
+<a href="https://www.youtube.com/watch?v=9HfLLEZ3hMI&t=13s"><img src="assets/socialMediaApi.gif" alt="Website Preview"></a>
+<a href="https://www.youtube.com/watch?v=9HfLLEZ3hMI&t=13s"><img src="assets/socialMediaApi.gif" alt="Website Preview"></a>
 
 
 ## 🚀 Installation
