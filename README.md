@@ -11,7 +11,7 @@ I WANT an API for my social network that uses a NoSQL database
 SO THAT my website can handle large amounts of unstructured data
 ```
 ## Walkthrough Video
-Check out the [walkthrough video](https://www.youtube.com/watch?v=9HfLLEZ3hMI&t=13s) to see the API in action!
+<a href="https://www.youtube.com/watch?v=9HfLLEZ3hMI&t=13s"><img src="assets/SocialMediaAPI.gif" alt="Website Preview"></a>
 
 ## 🚀 Installation
 1. Clone this GitHub repository
@@ -53,11 +53,7 @@ npm start
 ### ❤️ Reactions to Thoughts
 - `POST /api/thoughts/:thoughtId/reactions`: Adds a reaction to a thought.
 - `DELETE /api/thoughts/:thoughtId/reactions/:reactionId`: Removes a reaction by its `reactionId` from a thought.
-
 ## 📄 License
 This project uses the MIT license.
 ## 👏 Acknowledgements
 edX Boot Camps LLC for the project prompt and resources.
-
-
-
