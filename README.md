@@ -10,7 +10,7 @@ AS A social media startup
 I WANT an API for my social network that uses a NoSQL database
 SO THAT my website can handle large amounts of unstructured data
 ```
-## Walkthrough Video
+### Walkthrough Video
 <a href="https://www.youtube.com/watch?v=9HfLLEZ3hMI&t=13s"><img src="assets/socialMediaApi.gif" alt="Website Preview"></a>
 
 
