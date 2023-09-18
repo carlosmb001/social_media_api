@@ -11,7 +11,7 @@ I WANT an API for my social network that uses a NoSQL database
 SO THAT my website can handle large amounts of unstructured data
 ```
 ## Walkthrough Video
-<a href="https://www.youtube.com/watch?v=9HfLLEZ3hMI&t=13s"><img src="assets/socialMediaApi.gif" alt="Website Preview"></a>
+Check out the [walkthrough video](https://www.youtube.com/watch?v=9HfLLEZ3hMI&t=13s) to see the API in action!
 
 ## 🚀 Installation
 1. Clone this GitHub repository
