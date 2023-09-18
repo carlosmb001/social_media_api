@@ -35,6 +35,21 @@ const userSchema = new mongoose.Schema({
         id: false
     }
 );
+
+/* will delete the thoughts of the user when deleted
+not working as expected
+userSchema
+.pre('remove', async function(next) {
+    try {
+        // Remove all thoughts belonging to this user
+        await mongoose.model('Thought').deleteMany({ username: this.username });
+        next();
+    } catch (err) {
+        next(err);
+    }
+});
+*/
+
 // virtual get total count of friends on retrieval
 userSchema 
 .virtual('friendCount')
